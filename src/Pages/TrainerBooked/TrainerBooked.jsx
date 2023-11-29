@@ -10,6 +10,7 @@ const TrainerBooked = () => {
     const axiosSecure = useAxiosSecure();
     const handleGetPackage = (plan) => {
         const bookedInfo = {
+            name: user?.displayName,
             plan,
             slot,
             trainerEmail: email,

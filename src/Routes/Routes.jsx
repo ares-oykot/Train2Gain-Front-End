@@ -14,6 +14,7 @@ import AllSubscriber from "../Pages/AllSubscriber/AllSubscriber";
 import AllTrainer from "../Pages/AllTrainer/AllTrainer";
 import Payment from "../Pages/Payment/Payment";
 import AdminHome from "../Pages/AdminHome/AdminHome";
+import ManageSlot from "../Pages/ManageSlot/ManageSlot";
 
 export const router = createBrowserRouter([
     {
@@ -61,7 +62,10 @@ export const router = createBrowserRouter([
             // users routes
             {},
             // trainers routes
-            {},
+            {
+                path: "/dashboard/manageSlot",
+                element: <ManageSlot></ManageSlot>
+            },
             // admin routes
             {
                 path: "/dashboard/adminHome",

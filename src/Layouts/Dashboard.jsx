@@ -82,7 +82,7 @@ const Dashboard = () => {
                         <>
                             {/* Trainers Routes */}
                             <li>
-                                <NavLink to="/dashboard/users">
+                                <NavLink to="/dashboard/manageSlot">
                                     <MdManageAccounts />
                                     Manage Slots
                                 </NavLink>
