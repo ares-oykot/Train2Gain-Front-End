@@ -1,0 +1,38 @@
+[
+    {
+        "name": "king  khan",
+        "email": "soykot@gmail.com",
+        "age": "40",
+        "photo": "https://image.freepik.com/free-vector/man-profile-cartoon_18591-58482.jpg",
+        "timeDay": "2400",
+        "timeWeek": "400",
+        "experience": "10",
+        "skills": {
+            "skill1": "Cleanliness",
+            "skill2": "Customer Service",
+            "skill3": "Front Desk",
+            "skill4": "Fitness Programs",
+            "skill5": "Group Training",
+            "skill6": "Weight Loss"
+        },
+        "role": "trainer"
+    }
+    {
+        "name": "king  khan",
+        "email": "soykot@gmail.com",
+        "age": "40",
+        "photo": "https://image.freepik.com/free-vector/man-profile-cartoon_18591-58482.jpg",
+        "timeDay": "2400",
+        "timeWeek": "400",
+        "experience": "10",
+        "skills": {
+            "skill1": "Cleanliness",
+            "skill2": "Customer Service",
+            "skill3": "Front Desk",
+            "skill4": "Fitness Programs",
+            "skill5": "Group Training",
+            "skill6": "Weight Loss"
+        },
+        "role": "trainer"
+    }
+]

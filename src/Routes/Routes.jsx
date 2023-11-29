@@ -7,6 +7,7 @@ import BeATrainer from "../Pages/beATrainer/beATrainer";
 import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
 import AppliedTrainers from "../Pages/AppliedTrainers/AppliedTrainers";
+import Trainers from "../Pages/Trainers/Trainers";
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
                 path: "/signIn",
                 element: <SignIn></SignIn>,
             },
+            {
+                path: "/trainers",
+                element: <Trainers></Trainers>
+            }
         ],
     },
     {

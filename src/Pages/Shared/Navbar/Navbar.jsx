@@ -36,7 +36,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink
-                        to="/trainer"
+                        to="/trainers"
                         className={({ isActive, isPending }) =>
                             isPending
                                 ? "pending"

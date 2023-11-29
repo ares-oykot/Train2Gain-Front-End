@@ -20,7 +20,7 @@ const Banner = () => {
                         articles, for a whole body and mind <br /> approach to
                         feeling great.
                     </h6>
-                    <Link to="/gallery">
+                    <Link to="/classes">
                         <button className="text-white lg:text-lg font-medium mt-2 md:mt-2 lg:mt-7 border rounded hover:bg-white hover:text-black duration-300 px-3 py-1 md:px-4 md:py-1 lg:px-7 lg:py-2">
                             JOIN NOW
                         </button>
