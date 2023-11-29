@@ -59,7 +59,7 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/manageItems">
+                                <NavLink to="/dashboard/allTrainer">
                                     <FaUsers></FaUsers>
                                     All Trainers
                                 </NavLink>
@@ -132,7 +132,7 @@ const Dashboard = () => {
                     )}
                 </ul>
             </div>
-            <div className="flex-1 h-[100vh] lg:p-8 mt-10">
+            <div className="flex-1 h-[100vh] lg:p-8 mt-1 border">
                 <Outlet></Outlet>
             </div>
         </div>
