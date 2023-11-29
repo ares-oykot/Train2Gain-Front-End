@@ -76,6 +76,12 @@ const Dashboard = () => {
                                     Balance
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/dashboard/addNewForumAdmin">
+                                    <MdForum></MdForum>
+                                    Add New Forum
+                                </NavLink>
+                            </li>
                         </>
                     )}
                     {isTrainer && (
@@ -94,7 +100,9 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/users">
+                                <NavLink
+                                    to="/dashboard/addNewForumTrainer"
+                                >
                                     <MdForum />
                                     Add new Forum
                                 </NavLink>

@@ -16,6 +16,7 @@ import Payment from "../Pages/Payment/Payment";
 import AdminHome from "../Pages/AdminHome/AdminHome";
 import ManageSlot from "../Pages/ManageSlot/ManageSlot";
 import ManageMember from "../Pages/ManageMember/ManageMember";
+import AddNewForum from "../Pages/AddNewForum/AddNewForum";
 
 export const router = createBrowserRouter([
     {
@@ -65,16 +66,20 @@ export const router = createBrowserRouter([
             // trainers routes
             {
                 path: "/dashboard/manageSlot",
-                element: <ManageSlot></ManageSlot>
+                element: <ManageSlot></ManageSlot>,
             },
             {
                 path: "/dashboard/manageMember",
-                element: <ManageMember></ManageMember>
+                element: <ManageMember></ManageMember>,
+            },
+            {
+                path: "/dashboard/addNewForumTrainer",
+                element: <AddNewForum></AddNewForum>,
             },
             // admin routes
             {
                 path: "/dashboard/adminHome",
-                element: <AdminHome></AdminHome>
+                element: <AdminHome></AdminHome>,
             },
             {
                 path: "/dashboard/appliedTrainers",
@@ -90,7 +95,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/balance",
-                element: <Payment></Payment>
+                element: <Payment></Payment>,
+            },
+            {
+                path: "/dashboard/addNewForumAdmin",
+                element: <AddNewForum></AddNewForum>,
             },
         ],
     },
