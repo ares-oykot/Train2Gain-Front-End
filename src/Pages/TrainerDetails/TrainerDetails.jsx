@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import fb from "../../assets/social/facebook.png";
@@ -15,27 +15,26 @@ const TrainerDetails = () => {
             return res.data;
         },
     });
+    const { name, email, age, photo, timeDay, experience, skills } =
+        trainersDetails || {};
     const calculateSlots = (minutes) => {
-        // Assuming each slot is 60 minutes
         return Math.floor(minutes / 60);
     };
     const generateButtons = (slots) => {
         const buttons = [];
         for (let i = 0; i < slots; i++) {
             buttons.push(
-                <button
+                <Link
                     className="border btn bg-sky-400 py-1  rounded text-white"
                     key={i}
+                    to={`/trainerBooked/${email}/${`${i + 6}Am-${i + 7}Am`}`}
                 >
-                    {i + 6} am - {i + 7} am{" "}
-                </button>
+                    {i + 6} am - {i + 7} am
+                </Link>
             );
         }
         return buttons;
     };
-    const { name, email, age, photo, timeDay, experience, skills } =
-        trainersDetails || {};
-        console.log(skills);
     return (
         <div>
             <div className="mt-5">
@@ -70,18 +69,28 @@ const TrainerDetails = () => {
                                 Available Slots
                             </p>
                             <div className="grid grid-cols-5 gap-1">
-                                {generateButtons(
-                                    calculateSlots(timeDay)
-                                )}
+                                {generateButtons(calculateSlots(timeDay))}
                             </div>
                         </div>
                         <div className="mt-2 flex gap-1">
-                            <button className="text-xl bg-amber-300 px-2">{skills?.skill1}</button>
-                            <button className="text-xl bg-amber-300 px-2">{skills?.skill2}</button>
-                            <button className="text-xl bg-amber-300 px-2">{skills?.skill3}</button>
-                            <button className="text-xl bg-amber-300 px-2">{skills?.skill4}</button>
-                            <button className="text-xl bg-amber-300 px-2">{skills?.skill5}</button>
-                            <button className="text-xl bg-amber-300 px-2">{skills?.skill6}</button>
+                            <button className="text-xl bg-amber-300 px-2">
+                                {skills?.skill1}
+                            </button>
+                            <button className="text-xl bg-amber-300 px-2">
+                                {skills?.skill2}
+                            </button>
+                            <button className="text-xl bg-amber-300 px-2">
+                                {skills?.skill3}
+                            </button>
+                            <button className="text-xl bg-amber-300 px-2">
+                                {skills?.skill4}
+                            </button>
+                            <button className="text-xl bg-amber-300 px-2">
+                                {skills?.skill5}
+                            </button>
+                            <button className="text-xl bg-amber-300 px-2">
+                                {skills?.skill6}
+                            </button>
                         </div>
                     </div>
                 </div>
