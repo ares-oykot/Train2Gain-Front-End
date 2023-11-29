@@ -10,6 +10,7 @@ import AppliedTrainers from "../Pages/AppliedTrainers/AppliedTrainers";
 import Trainers from "../Pages/Trainers/Trainers";
 import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 import TrainerBooked from "../Pages/TrainerBooked/TrainerBooked";
+import AllSubscriber from "../Pages/AllSubscriber/AllSubscriber";
 
 export const router = createBrowserRouter([
     {
@@ -62,6 +63,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/appliedTrainers",
                 element: <AppliedTrainers></AppliedTrainers>,
+            },
+            {
+                path: "/dashboard/allSubscriber",
+                element: <AllSubscriber></AllSubscriber>
             },
         ],
     },

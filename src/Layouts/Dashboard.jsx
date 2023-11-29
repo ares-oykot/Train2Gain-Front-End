@@ -53,7 +53,7 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/addItems">
+                                <NavLink to="/dashboard/allSubscriber">
                                     <MdOutlineUnsubscribe></MdOutlineUnsubscribe>
                                     All Subscribers
                                 </NavLink>
