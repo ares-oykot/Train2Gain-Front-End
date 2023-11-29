@@ -12,6 +12,8 @@ import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 import TrainerBooked from "../Pages/TrainerBooked/TrainerBooked";
 import AllSubscriber from "../Pages/AllSubscriber/AllSubscriber";
 import AllTrainer from "../Pages/AllTrainer/AllTrainer";
+import Payment from "../Pages/Payment/Payment";
+import AdminHome from "../Pages/AdminHome/AdminHome";
 
 export const router = createBrowserRouter([
     {
@@ -62,6 +64,10 @@ export const router = createBrowserRouter([
             {},
             // admin routes
             {
+                path: "/dashboard/adminHome",
+                element: <AdminHome></AdminHome>
+            },
+            {
                 path: "/dashboard/appliedTrainers",
                 element: <AppliedTrainers></AppliedTrainers>,
             },
@@ -71,7 +77,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/allTrainer",
-                element: <AllTrainer></AllTrainer>
+                element: <AllTrainer></AllTrainer>,
+            },
+            {
+                path: "/dashboard/balance",
+                element: <Payment></Payment>
             },
         ],
     },
