@@ -15,6 +15,7 @@ import AllTrainer from "../Pages/AllTrainer/AllTrainer";
 import Payment from "../Pages/Payment/Payment";
 import AdminHome from "../Pages/AdminHome/AdminHome";
 import ManageSlot from "../Pages/ManageSlot/ManageSlot";
+import ManageMember from "../Pages/ManageMember/ManageMember";
 
 export const router = createBrowserRouter([
     {
@@ -65,6 +66,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/manageSlot",
                 element: <ManageSlot></ManageSlot>
+            },
+            {
+                path: "/dashboard/manageMember",
+                element: <ManageMember></ManageMember>
             },
             // admin routes
             {
