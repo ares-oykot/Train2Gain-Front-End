@@ -14,17 +14,7 @@ const Trainers = () => {
             return res.data;
         },
     });
-    const calculateSlots = (minutes) => {
-        // Assuming each slot is 60 minutes
-        return Math.floor(minutes / 60);
-    };
-    const generateButtons = (slots, id) => {
-        const buttons = [];
-        for (let i = 0; i < slots; i++) {
-            buttons.push(<button className="border bg-sky-400 py-1  rounded text-white" key={i}>{i + 6} am - {i + 7} am </button>);
-        }
-        return buttons;
-    };
+    
 
     return (
         <div className="max-w-screen-xl mx-auto">
@@ -70,20 +60,11 @@ const Trainers = () => {
                                     alt=""
                                 />
                             </div>
-                            <div className="mt-3">
-                                <p className="text-2xl font-semibold mb-2">
-                                    Available Slots
-                                </p>
-                                <div className="grid grid-cols-5 gap-1">
-                                    {generateButtons(
-                                        calculateSlots(trainer.timeDay),
-                                        trainer._id
-                                    )}
-                                </div>
-                            </div>
-                            <button className="bg-blue-600 text-white px-12 py-2 mt-3 rounded-lg">
-                                Know more
-                            </button>
+                            <Link to={`/trainerDetails/${trainer._id}`}>
+                                <button className="bg-blue-600 text-white px-12 py-2 mt-3 rounded-lg">
+                                    Know more
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
