@@ -36,7 +36,18 @@ const Blog = () => {
                 });
         }
     };
-    
+    const handleDisLike = (id, count) => {
+        const updateLike = parseInt(unLike) + parseInt(count);
+        if (updateLike > unLike) {
+            axiosPublic
+                .put(`/disLikeBlog/${id}`, { unLike: updateLike })
+                .then((res) => {
+                    if (res.data.modifiedCount > 0) {
+                        refetch();
+                    }
+                });
+        }
+    };
     return (
         <div className="mt-5">
             <h1 className="text-5xl font-semibold">Latest Blog</h1>
