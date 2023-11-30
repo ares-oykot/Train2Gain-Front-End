@@ -17,6 +17,7 @@ import AdminHome from "../Pages/AdminHome/AdminHome";
 import ManageSlot from "../Pages/ManageSlot/ManageSlot";
 import ManageMember from "../Pages/ManageMember/ManageMember";
 import AddNewForum from "../Pages/AddNewForum/AddNewForum";
+import Community from "../Pages/Community/Community";
 
 export const router = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ export const router = createBrowserRouter([
                 path: "/trainerBooked/:email/:slot",
                 element: <TrainerBooked></TrainerBooked>,
             },
+            {
+                path: "/community",
+                element: <Community></Community>
+            }
         ],
     },
     {

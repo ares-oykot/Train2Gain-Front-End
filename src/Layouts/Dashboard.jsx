@@ -100,9 +100,7 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink
-                                    to="/dashboard/addNewForumTrainer"
-                                >
+                                <NavLink to="/dashboard/addNewForumTrainer">
                                     <MdForum />
                                     Add new Forum
                                 </NavLink>
@@ -138,6 +136,13 @@ const Dashboard = () => {
                             </li>
                         </>
                     )}
+                    <hr className="my-10" />
+                    <li>
+                        <NavLink to="/">
+                            <FaHome></FaHome>
+                            Home
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
             <div className="flex-1 h-[100vh] lg:p-8 mt-1 border">

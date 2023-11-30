@@ -1,18 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import { Link } from "react-router-dom";
-import likee from "../../../assets/ico/thumb-up.png";
-import disLike from "../../../assets/ico/thumb-down.png";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import likee from "../../assets/ico/thumb-up.png";
+import disLike from "../../assets/ico/thumb-down.png";
 
-const Blog = () => {
-    const axiosPublic = useAxiosPublic();
-    const { data: blog = [], refetch } = useQuery({
-        queryKey: ["latestBlog"],
-        queryFn: async () => {
-            const res = await axiosPublic.get("/latest-blog");
-            return res.data;
-        },
-    });
+const Post = ({ blogs, refetch }) => {
     const {
         heading,
         subHeading,
@@ -22,7 +13,8 @@ const Blog = () => {
         unLike,
         role,
         _id,
-    } = blog;
+    } = blogs || {};
+    const axiosPublic = useAxiosPublic();
     const handleLike = (id, count) => {
         const updateLike = parseInt(like) + parseInt(count);
         if (updateLike > like) {
@@ -48,8 +40,7 @@ const Blog = () => {
         }
     };
     return (
-        <div className="mt-5">
-            <h1 className="text-5xl font-semibold">Latest Blog</h1>
+        <div>
             <div className="mt-5 flex flex-col md:flex-row gap-4">
                 <img
                     className="md:w-[400px] lg:w-[600px] rounded-xl"
@@ -67,7 +58,7 @@ const Blog = () => {
                     </p>
                     <div className="flex gap-2 mt-5">
                         <button className="btn btn-xs btn-success text-white disabled rounded-sm">
-                            {role === "admin" ? "Admin" : ""}
+                            {role === "admin" ? "Admin" : "Trainer"}
                         </button>
                         <span
                             onClick={() => handleLike(_id, 1)}
@@ -89,4 +80,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default Post;
