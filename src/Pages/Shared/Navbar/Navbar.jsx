@@ -2,9 +2,11 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/gym.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
+import profile from "../../../assets/ico/user.png"
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    // console.log(user?.photoURL);
     const handleLogOut = () => {
         logOut()
             .then(() => {})
@@ -185,9 +187,10 @@ const Navbar = () => {
                                 <img
                                     className="rounded-full w-full h-full"
                                     src={user?.photoURL}
+                                    alt={user?.displayName}
                                 />
                             ) : (
-                                <img className="rounded-full" src="" />
+                                <img className="rounded-full" src={profile} />
                             )}
                         </div>
                     </label>
@@ -196,12 +199,11 @@ const Navbar = () => {
                         className="dropdown-content z-[1] menu  shadow bg-base-100 rounded p-1 w-32  right-0"
                     >
                         {user ? (
-                            <button
-                                // onClick={handleSignOut}
-                                className=" bg-sky-500 w-full text-white px-6 py-2 duration-300 rounded-sm"
-                            >
-                                Sign Out
-                            </button>
+                            <Link to="/profile">
+                                <button className=" bg-sky-500 w-full text-white px-6 py-2 duration-300 rounded-sm">
+                                    Profile
+                                </button>
+                            </Link>
                         ) : (
                             <Link to="/signIn">
                                 <button className=" bg-sky-500 w-full text-white px-6 py-2 duration-300 rounded-sm">

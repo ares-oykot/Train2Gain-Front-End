@@ -22,6 +22,7 @@ import Classes from "../Pages/Classes/Classes";
 import AddNewClass from "../Pages/AddNewClass/AddNewClass";
 import ActivityLog from "../Pages/ActivityLog/ActivityLog";
 import Profile from "../Pages/Profile/Profile";
+import RecommendedClasses from "../Pages/RecommendedClasses/RecommendedClasses";
 
 export const router = createBrowserRouter([
     {
@@ -70,8 +71,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/profile",
-                element: <Profile></Profile>
-            }
+                element: <Profile></Profile>,
+            },
         ],
     },
     {
@@ -85,9 +86,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/profile",
-                element: <Profile></Profile>
+                element: <Profile></Profile>,
             },
-            {},
+            {
+                path: "/dashboard/recommendedClasses",
+                element: <RecommendedClasses></RecommendedClasses>
+            },
             // trainers routes
             {
                 path: "/dashboard/manageSlot",

@@ -33,7 +33,7 @@ const Dashboard = () => {
                 className={`${
                     toggle
                         ? "bg-[#212432] text-white -left-0 duration-300 absolute h-full"
-                        : "w-40 md:w-64 bg-[#212432] text-white  border h-[100vh] duration-300 -left-96 lg:left-0 absolute lg:relative lg:inline"
+                        : "w-40 md:w-64 bg-[#212432] text-white min-h-[100vh] duration-300 -left-96 lg:left-0 absolute lg:relative lg:inline"
                 }`}
             >
                 <h3 className="text-center text-2xl md:text-4xl font-semibold mt-10">
@@ -129,7 +129,7 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/users">
+                                <NavLink to="/dashboard/recommendedClasses">
                                     <MdClass />
                                     Recommended Classes
                                 </NavLink>
@@ -145,7 +145,7 @@ const Dashboard = () => {
                     </li>
                 </ul>
             </div>
-            <div className="flex-1 h-[100vh] lg:p-8 mt-1 border">
+            <div className="flex-1 min-h-[100vh] lg:p-8 mt-1">
                 <Outlet></Outlet>
             </div>
         </div>
