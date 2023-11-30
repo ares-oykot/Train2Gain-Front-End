@@ -23,11 +23,13 @@ import AddNewClass from "../Pages/AddNewClass/AddNewClass";
 import ActivityLog from "../Pages/ActivityLog/ActivityLog";
 import Profile from "../Pages/Profile/Profile";
 import RecommendedClasses from "../Pages/RecommendedClasses/RecommendedClasses";
+import Error from "../Pages/Error/Error";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: "/",
