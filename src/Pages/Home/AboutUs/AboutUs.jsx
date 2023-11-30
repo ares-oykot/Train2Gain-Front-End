@@ -3,8 +3,8 @@ import img2 from "../../../assets/About/blur-1972569_640.jpg";
 import img3 from "../../../assets/About/girl-3253532_640.jpg";
 const AboutUs = () => {
     return (
-        <div className="flex flex-col md:flex-row gap-6 lg:gap-16 md:px-10 md:py-10 lg:px-20 lg:py-20 bg-indigo-300">
-            <div className="px-3 py-3 order-2 md:order-1 flex w-full gap-3 md:gap-3 lg:gap-5 md:h-auto lg:h-[500px] md:p-3 lg:p-5 md:rounded-xl lg:rounded-2xl bg-indigo-200">
+        <div className="flex flex-col md:flex-row gap-6 lg:gap-16 md:px-10 md:py-10 lg:px-20 lg:py-20 bg-cyan-100">
+            <div className="px-3 py-3 order-2 md:order-1 flex w-full gap-3 md:gap-3 lg:gap-5 md:h-auto lg:h-[500px] md:p-3 lg:p-5 md:rounded-xl lg:rounded-2xl bg-indigo-100">
                 <div className="w-1/2 flex flex-col md:gap-3 gap-3 lg:gap-5">
                     <div className="h-1/2">
                         <img

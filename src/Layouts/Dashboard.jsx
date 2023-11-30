@@ -106,7 +106,7 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/users">
+                                <NavLink to="/dashboard/addNewClass">
                                     <MdClass />
                                     Add new Class
                                 </NavLink>

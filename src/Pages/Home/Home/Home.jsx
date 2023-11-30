@@ -1,3 +1,4 @@
+import Team from "../../Team/Team";
 import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
 import Blog from "../Blog/Blog";
@@ -14,6 +15,7 @@ const Home = () => {
             <Testimonials></Testimonials>
             <Blog></Blog>
             <Newsletter></Newsletter>
+            <Team></Team>
         </div>
     );
 };

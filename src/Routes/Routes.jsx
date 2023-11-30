@@ -18,6 +18,8 @@ import ManageSlot from "../Pages/ManageSlot/ManageSlot";
 import ManageMember from "../Pages/ManageMember/ManageMember";
 import AddNewForum from "../Pages/AddNewForum/AddNewForum";
 import Community from "../Pages/Community/Community";
+import Classes from "../Pages/Classes/Classes";
+import AddNewClass from "../Pages/AddNewClass/AddNewClass";
 
 export const router = createBrowserRouter([
     {
@@ -58,8 +60,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/community",
-                element: <Community></Community>
-            }
+                element: <Community></Community>,
+            },
+            {
+                path: "/classes",
+                element: <Classes></Classes>,
+            },
         ],
     },
     {
@@ -80,6 +86,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/addNewForumTrainer",
                 element: <AddNewForum></AddNewForum>,
+            },
+            {
+                path: "/dashboard/addNewClass",
+                element: <AddNewClass></AddNewClass>,
             },
             // admin routes
             {

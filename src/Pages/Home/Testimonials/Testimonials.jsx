@@ -44,7 +44,7 @@ const Testimonials = () => {
                 {testimonials?.map((testimonial) => (
                     <SwiperSlide key={testimonial._id}>
                         <div className="flex justify-center py-5">
-                            <div className="w-[650px] h-72 border bg-sky-100 p-5 md:py-8 md:px-14">
+                            <div className="w-[650px] md:h-72 border bg-sky-100 p-5 md:py-8 md:px-14">
                                 <span>
                                     <img
                                         className="w-8 inline-block"
