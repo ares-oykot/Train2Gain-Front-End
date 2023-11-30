@@ -24,6 +24,7 @@ import ActivityLog from "../Pages/ActivityLog/ActivityLog";
 import Profile from "../Pages/Profile/Profile";
 import RecommendedClasses from "../Pages/RecommendedClasses/RecommendedClasses";
 import Error from "../Pages/Error/Error";
+import PrivetRoute from "./PrivetRoute";
 
 export const router = createBrowserRouter([
     {
@@ -41,7 +42,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/beATrainer",
-                element: <BeATrainer></BeATrainer>,
+                element: (
+                    <PrivetRoute>
+                        <BeATrainer></BeATrainer>
+                    </PrivetRoute>
+                ),
             },
             {
                 path: "/signUp",
@@ -53,15 +58,27 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/trainers",
-                element: <Trainers></Trainers>,
+                element: (
+                    <PrivetRoute>
+                        <Trainers></Trainers>
+                    </PrivetRoute>
+                ),
             },
             {
                 path: "/trainerDetails/:id",
-                element: <TrainerDetails></TrainerDetails>,
+                element: (
+                    <PrivetRoute>
+                        <TrainerDetails></TrainerDetails>
+                    </PrivetRoute>
+                ),
             },
             {
                 path: "/trainerBooked/:email/:slot",
-                element: <TrainerBooked></TrainerBooked>,
+                element: (
+                    <PrivetRoute>
+                        <TrainerBooked></TrainerBooked>
+                    </PrivetRoute>
+                ),
             },
             {
                 path: "/community",
@@ -79,7 +96,11 @@ export const router = createBrowserRouter([
     },
     {
         path: "/dashboard",
-        element: <Dashboard></Dashboard>,
+        element: (
+            <PrivetRoute>
+                <Dashboard></Dashboard>
+            </PrivetRoute>
+        ),
         children: [
             // users routes
             {
@@ -92,7 +113,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/recommendedClasses",
-                element: <RecommendedClasses></RecommendedClasses>
+                element: <RecommendedClasses></RecommendedClasses>,
             },
             // trainers routes
             {
