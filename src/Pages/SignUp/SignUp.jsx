@@ -3,7 +3,7 @@ import facebook from "../../assets/ico/facebook(1).png";
 import twitter from "../../assets/ico/twitter.png";
 import swal from "sweetalert";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiFillEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { updateProfile } from "firebase/auth";
@@ -13,7 +13,7 @@ const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
     const axiosPublic = useAxiosPublic();
     const { createUser } = useContext(AuthContext);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const handleSignUp = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -67,7 +67,7 @@ const SignUp = () => {
                                     "User Sign Up successful",
                                     "success"
                                 );
-                                // navigate("/");
+                                navigate("/");
                                 event.target.reset();
                                 return;
                             } else {
@@ -76,7 +76,7 @@ const SignUp = () => {
                                     "User Already exists",
                                     "success"
                                 );
-                                // navigate("/");
+                                navigate("/");
                             }
                         });
                     })

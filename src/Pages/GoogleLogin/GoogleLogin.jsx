@@ -3,7 +3,10 @@ import google from "../../assets/ico/google.png"
 import { AuthContext } from "../../Providers/AuthProviders";
 import swal from "sweetalert";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { useLocation, useNavigate } from "react-router-dom";
 const GoogleLogin = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
     const { googleSignIn } = useContext(AuthContext);
     const axiosPublic = useAxiosPublic();
     const handleGoogleSignUp = () => {
@@ -17,7 +20,7 @@ const GoogleLogin = () => {
                 };
                 axiosPublic.post("/users", userInfo).then(() => {
                     swal("Nice!!", "User Login successful", "success");
-                    // navigate("/");
+                    navigate(location?.state ? location.state : "/");
                 }); 
             })
             .catch((error) => {
