@@ -20,6 +20,7 @@ import AddNewForum from "../Pages/AddNewForum/AddNewForum";
 import Community from "../Pages/Community/Community";
 import Classes from "../Pages/Classes/Classes";
 import AddNewClass from "../Pages/AddNewClass/AddNewClass";
+import ActivityLog from "../Pages/ActivityLog/ActivityLog";
 
 export const router = createBrowserRouter([
     {
@@ -73,6 +74,10 @@ export const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
         children: [
             // users routes
+            {
+                path: "/dashboard/log",
+                element: <ActivityLog></ActivityLog>,
+            },
             {},
             // trainers routes
             {

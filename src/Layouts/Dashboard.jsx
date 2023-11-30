@@ -117,7 +117,7 @@ const Dashboard = () => {
                         <>
                             {/* Members Routes */}
                             <li>
-                                <NavLink to="/dashboard/users">
+                                <NavLink to="/dashboard/log">
                                     <VscCompassActive></VscCompassActive>
                                     Activity Log
                                 </NavLink>
