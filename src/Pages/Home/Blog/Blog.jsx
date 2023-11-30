@@ -63,7 +63,7 @@ const Blog = () => {
                     <p className="text-xl lg:text-3xl mt-2">{subHeading}</p>
                     <p className="lg:text-xl mt-2">Date: {uploadDate}</p>
                     <p className="md:text-2xl mt-2 text-blue-500">
-                        <Link>Read More...</Link>
+                        <Link to="/community">Read More...</Link>
                     </p>
                     <div className="flex gap-2 mt-5">
                         <button className="btn btn-xs btn-success text-white disabled rounded-sm">
