@@ -13,7 +13,7 @@ const Team = () => {
     return (
         <div className="mt-5">
             <h1 className="text-5xl font-extrabold">Our Coach</h1>
-            <div className="flex w-full gap-8">
+            <div className="flex flex-col md:flex-row w-full gap-8">
                 {trainers?.slice(0, 4).map((trainer) => (
                     <div
                         className="mt-5 text-lg rounded-b-md font-semibold bg-slate-200"

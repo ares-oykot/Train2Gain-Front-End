@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
 import { FaBook, FaHome, FaUsers } from "react-icons/fa";
@@ -47,7 +47,7 @@ const Dashboard = () => {
                         <>
                             {/* Admin Routes */}
                             <li>
-                                <NavLink to="/dashboard/adminHome">
+                                <NavLink to="/dashboard">
                                     <FaHome></FaHome>
                                     Admin Home
                                 </NavLink>
@@ -145,7 +145,7 @@ const Dashboard = () => {
                     </li>
                 </ul>
             </div>
-            <div className="flex-1 min-h-[100vh] lg:p-8 mt-1">
+            <div className="flex-1 min-h-[100vh] lg:p-8 mt-1 bg-sky-100">
                 <Outlet></Outlet>
             </div>
         </div>

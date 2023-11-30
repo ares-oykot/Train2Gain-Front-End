@@ -3,6 +3,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
 import Blog from "../Blog/Blog";
 import Featured from "../Featured/Featured";
+import Footer from "../Footer/Footer";
 import Newsletter from "../Newsletter/Newsletter";
 import Testimonials from "../Testimonials/Testimonials";
 
@@ -16,6 +17,7 @@ const Home = () => {
             <Blog></Blog>
             <Newsletter></Newsletter>
             <Team></Team>
+            <Footer></Footer>
         </div>
     );
 };
