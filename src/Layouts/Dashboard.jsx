@@ -123,7 +123,7 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/users">
+                                <NavLink to="/dashboard/profile">
                                     <CgProfile></CgProfile>
                                     Profile Settings
                                 </NavLink>

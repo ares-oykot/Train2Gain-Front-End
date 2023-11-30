@@ -21,6 +21,7 @@ import Community from "../Pages/Community/Community";
 import Classes from "../Pages/Classes/Classes";
 import AddNewClass from "../Pages/AddNewClass/AddNewClass";
 import ActivityLog from "../Pages/ActivityLog/ActivityLog";
+import Profile from "../Pages/Profile/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -67,6 +68,10 @@ export const router = createBrowserRouter([
                 path: "/classes",
                 element: <Classes></Classes>,
             },
+            {
+                path: "/profile",
+                element: <Profile></Profile>
+            }
         ],
     },
     {
@@ -77,6 +82,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/log",
                 element: <ActivityLog></ActivityLog>,
+            },
+            {
+                path: "/dashboard/profile",
+                element: <Profile></Profile>
             },
             {},
             // trainers routes

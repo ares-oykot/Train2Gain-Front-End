@@ -1,8 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../../assets/gym.png"
+import logo from "../../../assets/gym.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProviders";
 
 const Navbar = () => {
-    const user = true;
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {})
+            .catch((error) => {
+                console.log(error.message);
+            });
+    };
     const navLinks = (
         <>
             <div className="flex flex-col lg:flex-row lg:gap-5 ">
@@ -90,20 +99,31 @@ const Navbar = () => {
                         COMMUNITY
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink
-                        to="/signIn"
-                        className={({ isActive, isPending }) =>
-                            isPending
-                                ? "pending"
-                                : isActive
-                                ? "text-sky-500 lg:font-semibold lg:border-b-2 lg:duration-200 lg:hover:mx-2 border-sky-600"
-                                : "text-black lg:duration-200 lg:hover:ml-2"
-                        }
-                    >
-                        SIGN IN
-                    </NavLink>
-                </li>
+                {user ? (
+                    <li>
+                        <button
+                            onClick={handleLogOut}
+                            className="bg-amber-200 px-2 py-1 font-medium rounded"
+                        >
+                            SIGN OUT
+                        </button>
+                    </li>
+                ) : (
+                    <li>
+                        <NavLink
+                            to="/signIn"
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                    ? "text-sky-500 lg:font-semibold lg:border-b-2 lg:duration-200 lg:hover:mx-2 border-sky-600"
+                                    : "text-black lg:duration-200 lg:hover:ml-2"
+                            }
+                        >
+                            SIGN IN
+                        </NavLink>
+                    </li>
+                )}
             </div>
         </>
     );
