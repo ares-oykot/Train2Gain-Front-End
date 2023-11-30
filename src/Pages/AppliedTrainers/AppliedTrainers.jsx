@@ -29,7 +29,7 @@ const AppliedTrainers = () => {
         <div className="">
             <SectionTitle heading="Applied Trainers"></SectionTitle>
             <h2 className="text-2xl font-semibold my-2">
-                Total Subscriber: {appliedTrainers.length}
+                Total Applied Trainer: {appliedTrainers.length}
             </h2>
             <div className="overflow-x-auto ">
                 <table className="table table-zebra w-full ">
